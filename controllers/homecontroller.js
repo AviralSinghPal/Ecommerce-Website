@@ -13,9 +13,14 @@ exports.home=bigPromise(async(req,res)=>{
 
 //Using Try Catch method
 exports.homeDummy=(req,res)=>{
+    try{
     res.status(200).json({
         sucess: true,
         greeting:"Hello from dummy"
     });
+    }   
+    catch(error){
+    console.log(error);
+    }
 };
 
